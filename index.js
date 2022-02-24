@@ -1,5 +1,3 @@
-const { json } = require("express/lib/response");
-
 function submitData(name, email) {
 const formData = {
    name: name,
@@ -26,9 +24,10 @@ const formData = {
         console.log(object);
     })
     .catch(function (error) {
-        let h3 = document.createElement('h3');
-        h3.innerHTML = alert("Unauthorized Access");
-        document.body.appendChild(h3);
+      debugger;
+        let h2 = document.createElement('h2');
+        h2.innerHTML = error.message;
+        document.body.appendChild(h2);
         console.log(error.message);
     });
 };
